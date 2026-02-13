@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Audrain | Sovereign Simulation Architect</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --accent-color: #00d4ff; /* "Sovereign Blue" */
+            --secondary-text: #a0a0a0;
+            --card-bg: #1e1e1e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            text-align: center; /* Centers the headshot and text */
+        }
+
+        .headshot {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Makes it a perfect circle */
+            border: 3px solid var(--accent-color);
+            object-fit: cover;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #fff;
+        }
+
+        .tagline {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            display: block;
+        }
+
+        h2 {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 40px;
+            color: #fff;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            text-align: left;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .project-meta {
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            background-color: #333;
+            color: var(--accent-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-family: monospace;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="headshot.png" alt="Kevin Audrain" class="headshot">
+        
+        <h1>Kevin Audrain</h1>
+        <span class="tagline">Lead Architect, Open Game Stack | Senior Simulation Engineer</span>
+    </header>
+
+    <section id="mission">
+        <p>
+            I specialize in building simulation architectures that prioritize long-term sustainment over short-term licensing. 
+            My mission is <strong>Sovereign Computing</strong>: ensuring that the tools we use to build critical infrastructure 
+            cannot be revoked, deprecated, or locked behind a subscription.
+        </p>
+        <p>
+            With over 20 years of experience spanning Naval Nuclear Propulsion and commercial game development, 
+            I bridge the gap between "Indie" creativity and "Defense" rigor. I advocate for the 
+            <strong>Modular Open Systems Approach (MOSA)</strong> to eliminate vendor lock-in for long-lifecycle projects.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Active Architectures</h2>
+
+        <div class="project-card">
+            <div class="project-title">Open Game Stack (OGS)</div>
+            <span class="project-meta">Lead Architect & Founder | 2026 - Present</span>
+            <p>
+                A "Sovereign Game Development Stack" designed for dual-use application in Defense and Indie sectors.
+                OGS versions the entire creative environment (Engine + Tools) alongside the source code to ensure 
+                total reproducibility for 20+ years.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-badge">Godot 4.3</span>
+                <span class="tech-badge">Blender</span>
+                <span class="tech-badge">Krita</span>
+                <span class="tech-badge">Git LFS</span>
+                <span class="tech-badge">MOSA</span>
+            </div>
+            <p style="margin-top: 15px;">
+                <a href="https://opengamestack-org.github.io/" target="_blank">View The Manifesto &rarr;</a>
+            </p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">Sovereign Infrastructure Research</div>
+            <span class="project-meta">Personal Research | Decentralized Systems</span>
+            <p>
+                Exploring the intersection of sovereign finance and sovereign computing. Managing node infrastructure 
+                to test resilience in non-permissive network environments.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-badge">Umbrel</span>
+                <span class="tech-badge">Bitcoin Knots</span>
+                <span class="tech-badge">Lightning Network</span>
+                <span class="tech-badge">Self-Hosted Cloud</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            Based in the Hampton Roads, VA Metropolitan Area.
+            <br>
+            <a href="https://www.linkedin.com/in/kevin-audrain" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/draino7n7" target="_blank">GitHub</a>
+        </p>
+    </section>
+
+    <footer>
+        &copy; 2026 Kevin Audrain. Built on Open Standards. No Trackers.
+    </footer>
+</div>
+
+</body>
+</html>
