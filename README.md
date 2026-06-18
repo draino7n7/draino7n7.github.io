@@ -5,7 +5,7 @@
 ---
 
 ## Summary
-Senior Simulation Software Engineer and Technical Lead with 25 years of experience in Naval Nuclear operations, defense training systems, and enterprise software delivery. I turn under-scoped technical programs into reliable simulation platforms, automated CI/CD pipelines, and sustainment-ready software. Core strengths include Unity/Unreal simulation engineering, C#/.NET development, and DevOps automation with Jenkins and Bamboo. Seeking remote or regional senior technical leadership roles in simulation, training systems, and software delivery.
+Senior Software Engineer and Technical Lead specializing in the end-to-end architecture of Unity-based MRTS 3D training simulators. Backed by a 25-year foundation spanning zero-error Naval Nuclear operations and enterprise software delivery, I rescue under-scoped initiatives by building scalable simulation platforms, robust C#/.NET architectures, and automated CI/CD pipelines. Driven by extreme ownership throughout the engineering lifecycle, I am seeking remote or regional leadership roles to bridge the gap between rigorous operational requirements and agile simulation engineering.
 
 ---
 

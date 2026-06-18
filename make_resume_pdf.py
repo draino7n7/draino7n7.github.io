@@ -9,7 +9,7 @@ It reads README.md and writes KevinAudrain_Resume.pdf in the same folder.
 import re
 
 from reportlab.lib.pagesizes import letter
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, KeepTogether
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 
@@ -37,26 +37,72 @@ def format_text(text):
 
 story = []
 
-for raw in lines:
+i = 0
+while i < len(lines):
+    raw = lines[i]
     if raw.startswith('# '):
         text = format_text(raw[2:].strip())
         story.append(Paragraph(text, styles['MyHeading1']))
-    elif raw.startswith('## '):
+        i += 1
+        continue
+    if raw.startswith('## '):
         text = format_text(raw[3:].strip())
         story.append(Paragraph(text, styles['MyHeading2']))
-    elif raw.startswith('### '):
+        i += 1
+        continue
+    if raw.startswith('### '):
+        # Keep the heading with the following bullet (if present) to avoid orphaned job titles
         text = format_text(raw[4:].strip())
-        story.append(Paragraph(text, styles['MyHeading2']))
-    elif raw.startswith('* ') or raw.startswith('- '):
+        heading = Paragraph(text, styles['MyHeading2'])
+        # find next non-empty line
+        j = i + 1
+        while j < len(lines) and lines[j].strip() == '':
+            j += 1
+        # If next line is a bold role line (starts with '**'), and the following non-empty line is a bullet,
+        # keep heading + role + first bullet together.
+        if j < len(lines) and lines[j].lstrip().startswith('**'):
+            role_text = format_text(lines[j].strip())
+            role_para = Paragraph(role_text, styles['MyBodyText'])
+            k = j + 1
+            while k < len(lines) and lines[k].strip() == '':
+                k += 1
+            if k < len(lines) and (lines[k].startswith('* ') or lines[k].startswith('- ')):
+                bullet = format_text(lines[k][2:].strip())
+                bullet_para = Paragraph(bullet, styles['MyList'], bulletText='•')
+                story.append(KeepTogether([heading, role_para, bullet_para]))
+                i = k + 1
+                continue
+            else:
+                story.append(KeepTogether([heading, role_para]))
+                i = j + 1
+                continue
+        # Otherwise, if next non-empty line is a bullet, keep heading + first bullet together
+        if j < len(lines) and (lines[j].startswith('* ') or lines[j].startswith('- ')):
+            bullet = format_text(lines[j][2:].strip())
+            bullet_para = Paragraph(bullet, styles['MyList'], bulletText='•')
+            story.append(KeepTogether([heading, bullet_para]))
+            i = j + 1
+            continue
+        else:
+            story.append(heading)
+            i += 1
+            continue
+    if raw.startswith('* ') or raw.startswith('- '):
         bullet = format_text(raw[2:].strip())
         story.append(Paragraph(bullet, styles['MyList'], bulletText='•'))
-    elif raw.startswith('---'):
+        i += 1
+        continue
+    if raw.startswith('---'):
         story.append(Spacer(1, 8))
-    elif raw.strip() == '':
+        i += 1
+        continue
+    if raw.strip() == '':
         story.append(Spacer(1, 6))
-    else:
-        text = format_text(raw)
-        story.append(Paragraph(text, styles['MyBodyText']))
+        i += 1
+        continue
+    text = format_text(raw)
+    story.append(Paragraph(text, styles['MyBodyText']))
+    i += 1
 
 cleaned = []
 for item in story:
