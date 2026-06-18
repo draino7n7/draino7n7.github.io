@@ -20,11 +20,11 @@ with open(input_path, 'r', encoding='utf-8') as f:
     lines = [line.rstrip() for line in f]
 
 styles = getSampleStyleSheet()
-styles.add(ParagraphStyle(name='MyHeading1', parent=styles['Heading1'], fontName='Helvetica-Bold', fontSize=22, spaceAfter=10, leading=26))
-styles.add(ParagraphStyle(name='MyHeading2', parent=styles['Heading2'], fontName='Helvetica-Bold', fontSize=14, spaceAfter=6, leading=16))
-styles.add(ParagraphStyle(name='MyBodyText', parent=styles['BodyText'], fontName='Helvetica', fontSize=10, leading=13, spaceAfter=4))
-styles.add(ParagraphStyle(name='MyItalic', parent=styles['BodyText'], fontName='Helvetica-Oblique', fontSize=10, leading=13, textColor=colors.HexColor('#9aa3ad')))
-styles.add(ParagraphStyle(name='MyList', parent=styles['BodyText'], leftIndent=22, bulletIndent=12, bulletFontName='Helvetica', bulletFontSize=10, leading=13, bulletOffsetY=2, spaceAfter=1))
+styles.add(ParagraphStyle(name='MyHeading1', parent=styles['Heading1'], fontName='Times-Bold', fontSize=22, spaceAfter=10, leading=26))
+styles.add(ParagraphStyle(name='MyHeading2', parent=styles['Heading2'], fontName='Times-Bold', fontSize=14, spaceAfter=6, leading=16))
+styles.add(ParagraphStyle(name='MyBodyText', parent=styles['BodyText'], fontName='Times-Roman', fontSize=10, leading=13, spaceAfter=4))
+styles.add(ParagraphStyle(name='MyItalic', parent=styles['BodyText'], fontName='Times-Italic', fontSize=10, leading=13, textColor=colors.HexColor('#9aa3ad')))
+styles.add(ParagraphStyle(name='MyList', parent=styles['BodyText'], leftIndent=22, bulletIndent=12, bulletFontName='Times-Roman', bulletFontSize=10, leading=13, bulletOffsetY=2, spaceAfter=1))
 
 
 def format_text(text):
