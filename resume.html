@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Kevin Audrain</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=JetBrains+Mono:wght@400;600&family=Manrope:wght@400;600;700&display=swap');
+        :root { --bg: #0b0d12; --surface: #12171f; --text: #e6e6e6; --muted: #8f99a8; --accent: #00d4ff; }
+        * { box-sizing: border-box; }
+        body { margin: 0; min-height: 100vh; background: #080a0f; color: var(--text); font-family: 'Manrope', system-ui, -apple-system, sans-serif; }
+        .page { max-width: 900px; margin: 0 auto; padding: 40px 20px 80px; }
+        header { margin-bottom: 36px; }
+        .nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            padding: 12px 0;
+            margin: 0 -20px 16px;
+            background: rgba(8, 13, 18, 0.92);
+            backdrop-filter: blur(12px);
+            z-index: 10;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+        .nav a { color: var(--accent); text-decoration: none; }
+        .hero { padding: 28px; border: 1px solid #1f2733; border-radius: 18px; background: #10151e; }
+        h1 { margin: 0 0 8px; font-family: 'Fraunces', serif; font-size: 3rem; }
+        .subtitle { margin: 0 0 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.9rem; }
+        .meta { margin: 0 0 18px; color: var(--muted); }
+        .button { display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border-radius: 999px; background: var(--accent); color: #0b0d12; font-weight: 700; text-decoration: none; }
+        section { margin-top: 46px; }
+        h2 { margin-bottom: 16px; font-family: 'Fraunces', serif; font-size: 2rem; color: #fff; letter-spacing: 0.02em; }
+        h3 { margin: 0 0 8px; font-size: 1.2rem; }
+        p { margin-bottom: 16px; }
+        .small { color: var(--muted); font-size: 0.95rem; }
+        ul { padding-left: 20px; margin: 0 0 16px; }
+        li { margin-bottom: 10px; }
+        .section-card { padding: 22px; border-radius: 14px; background: var(--surface); border: 1px solid #1f2733; box-shadow: 0 20px 50px rgba(0,0,0,0.18); }
+        .skill-list { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-pill { padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,0.05); color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.88rem; }
+        .resume-footer { margin-top: 80px; text-align: center; color: var(--muted); font-size: 0.9rem; }
+        a:hover { text-decoration: underline; }
+        @media (max-width: 720px) { .hero { padding: 20px; } h1 { font-size: 2.4rem; } .nav { flex-direction: column; align-items: flex-start; } }
+    </style>
+</head>
+<body>
+<!-- NOTE: Keep this resume page aligned with README.md; update both files together. -->
+<div class="page">
+    <div class="nav">
+        <div><strong>Kevin Audrain</strong></div>
+        <div><a href="index.html">Back to homepage</a> | <a href="KevinAudrain_Resume.pdf" download target="_blank">Download Resume</a></div>
+    </div>
+    <header>
+        <div class="hero">
+            <h1>Senior Simulation Software Engineer</h1>
+            <div class="subtitle">Navy Nuclear Veteran | Technical Lead | Simulation & Software Delivery</div>
+            <p class="meta">Hampton Roads, VA Metropolitan Area (Transitioning to Greater Philadelphia Area) | Open to remote or regional senior technical leadership roles</p>
+            <p>I am a Senior Software Engineer and Technical Lead with 25 years of experience spanning Naval Nuclear operations and high-stakes enterprise software. I specialize in turning around under-scoped technical programs, building automated CI/CD pipelines, and leading distributed teams to deliver mission-critical simulation systems.</p>
+            <p>My expertise includes Unity, Unreal, Godot, C#/.NET, Jenkins, and Bamboo, with a focus on sustainment-ready architectures for complex training systems.</p>
+        </div>
+    </header>
+    <section>
+        <h2>Top Skills</h2>
+        <div class="section-card skill-list">
+            <span class="skill-pill">Unity Game Development</span>
+            <span class="skill-pill">Simulation & Training Systems</span>
+            <span class="skill-pill">CI/CD Automation</span>
+            <span class="skill-pill">C# / .NET</span>
+        </div>
+    </section>
+    <section>
+        <h2>Professional Experience</h2>
+        <div class="section-card">
+            <h3>Long Wave Inc.</h3>
+            <div class="small">Senior Software Engineer | Nov 2024 – Present</div>
+            <ul>
+                <li>Led a distributed team of 6 to update a high-stakes MRTS 3D E-6B training simulator and deliver a reliable training platform for Navy personnel.</li>
+                <li>Architected the automated Bamboo CI/CD pipeline and modernized Unity/WPF interfaces to support diverse input methods.</li>
+            </ul>
+            <h3>Mission Technologies, a division of HII</h3>
+            <div class="small">Senior Software Engineer | May 2022 – Oct 2024</div>
+            <ul>
+                <li>Delivered the shipboard Data Collection and Debrief application using C#, PostgreSQL, and Angular while modernizing CI/CD with Jenkinsfiles.</li>
+                <li>Maintained a critical Unity-based SaaS training app and launched the team’s first automated pipeline.</li>
+            </ul>
+            <h3>CAE USA</h3>
+            <div class="small">Innovation Software Developer - VR/AR | Sept 2021 – May 2022</div>
+            <ul>
+                <li>Led technical evaluation and approval of VR/AR training simulators for USAF programs (F-15, A-10, AWACS).</li>
+                <li>Engineered synthetic task environments in Unity and Unreal to integrate diverse VAMR hardware.</li>
+            </ul>
+            <h3>General Dynamics Information Technology (GDIT)</h3>
+            <div class="small">Software Engineer for Curriculum Development | Mar 2020 – Sept 2021</div>
+            <ul>
+                <li>Delivered four Unity-based MRTS applications for an under-scoped initiative and brought project stability with Jira.</li>
+                <li>Directed the end-to-end 3D asset production pipeline, including LiDAR capture and environment authoring.</li>
+            </ul>
+            <h3>Audrain Entertainment</h3>
+            <div class="small">Game Developer | June 2018 – May 2021</div>
+            <ul>
+                <li>Owned full SDLC for five commercial mobile games on Google Play using Unity and C#.</li>
+            </ul>
+            <h3>L3Harris Technologies</h3>
+            <div class="small">Project Lead - Continuous Operational and Maintenance Assessment | Aug 2019 – Feb 2020</div>
+            <ul>
+                <li>Served as site lead at the Mid-Atlantic Regional Maintenance Center and modernized collaboration with Git.</li>
+                <li>Improved a legacy Access/VBA workflow for cross-team sustainment.</li>
+            </ul>
+            <h3>US Navy</h3>
+            <div class="small">Navy Nuclear Veteran | Sept 1999 – Sept 2019</div>
+            <ul>
+                <li><strong>Talent Development Manager (2017-2019):</strong> Directed a leadership course for 600 students and transitioned curriculum to digital delivery.</li>
+                <li><strong>Nuclear Propulsion Plant Supervisor (2005-2017):</strong> Managed maintenance schedules and led 11-person teams through zero-error at-sea operations.</li>
+                <li><strong>Nuclear Propulsion Plant Operator (1999-2005):</strong> Performed reactor operations and supported shipboard power generation.</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h2>Education</h2>
+        <div class="section-card">
+            <ul>
+                <li><strong>Master of Business Administration (MBA), Applied Computer Science</strong> – Northcentral University</li>
+                <li><strong>Java Programmer</strong> – Penn Foster Group</li>
+                <li><strong>Bachelor of Science (BS), Nuclear Engineering Technology</strong> – Thomas Edison State College</li>
+                <li><strong>Computer Engineering</strong> – Old Dominion University</li>
+                <li><strong>Nuclear Power School</strong> – Naval Nuclear Power Training Command (NNPTC)</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h2>Contact</h2>
+        <div class="section-card">
+            <p><strong>Email:</strong> <a href="mailto:kevin_audrain@yahoo.com">kevin_audrain@yahoo.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kevin-audrain" target="_blank" rel="noopener noreferrer">linkedin.com/in/kevin-audrain</a></p>
+            <p><strong>Portfolio:</strong> <a href="https://github.com/draino7n7" target="_blank" rel="noopener noreferrer">github.com/draino7n7</a> | <a href="http://www.kevinaudrain.com" target="_blank" rel="noopener noreferrer">kevinaudrain.com</a></p>
+        </div>
+    </section>
+    <div class="resume-footer">&copy; 2026 Kevin Audrain. Built for recruiting and hiring teams.</div>
+</div>
+</body>
+</html>
