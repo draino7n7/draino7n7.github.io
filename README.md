@@ -60,14 +60,15 @@ Navy Nuclear Veteran | Sept 1999 - Sept 2019
 
 ## Education
 
-- **Master of Business Administration (MBA), Applied Computer Science** – Northcentral University
-- **Java Programmer** – Penn Foster Group
-- **Bachelor of Science (BS), Nuclear Engineering Technology** – Thomas Edison State College
-- **Computer Engineering** – Old Dominion University
-- **Nuclear Power School** – Naval Nuclear Power Training Command (NNPTC)
+- **Master of Business Administration (MBA), Applied Computer Science** - Northcentral University
+- **Java Programmer** - Penn Foster Group
+- **Bachelor of Science (BS), Nuclear Engineering Technology** - Thomas Edison State College
+- **Computer Engineering** - Old Dominion University
+- **Nuclear Power School** - Naval Nuclear Power Training Command (NNPTC)
 
 ## Contact
 
-- Email: contact@audrain.games
+- Email: kevin_audrain@yahoo.com
 - GitHub: https://github.com/draino7n7
+- LinkedIn: [Kevin Audrain | LinkedIn](https://www.linkedin.com/in/kevin-audrain/)
 - Portfolio: https://github.com/draino7n7 | https://audrain.games

@@ -1,9 +1,9 @@
-"""Generate KevinAudrain_Resume.pdf from resume.md.
+"""Generate KevinAudrain_Resume.pdf from README.md.
 
 Run this script from the repository root:
     python scripts/make_resume_pdf.py
 
-It reads resume.md and writes KevinAudrain_Resume.pdf to assets/docs.
+It reads README.md and writes KevinAudrain_Resume.pdf to assets/docs.
 """
 
 import re
@@ -15,7 +15,7 @@ from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, KeepTogether
 
 root_dir = Path(__file__).resolve().parent.parent
-input_path = root_dir / 'resume.md'
+input_path = root_dir / 'README.md'
 out_path = root_dir / 'assets' / 'docs' / 'KevinAudrain_Resume.pdf'
 out_path.parent.mkdir(parents=True, exist_ok=True)
 
